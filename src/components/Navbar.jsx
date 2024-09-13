@@ -12,7 +12,14 @@ const NavMenu = () => {
     <ul className="flex flex-col md:flex-row items-center md:space-x-8 gap-8">
       {navItems.map((item, index) => (
         <li key={index}>
-          <NavLink to={item.path}>{item.label}</NavLink>
+          <NavLink
+            to={item.path}
+            className={({ isActive }) =>
+              isActive ? "text-primary font-bold" : "hover:text-primary"
+            }
+          >
+            {item.label}
+          </NavLink>
         </li>
       ))}
     </ul>
@@ -24,7 +31,7 @@ export const Navbar = () => {
     <header>
       <nav className="max-w-screen-2xl container mx-auto py-6 px-4 flex justify-between items-center">
         {/* nav logo */}
-        <NavLink to="/" >
+        <NavLink to="/">
           <img src="../../public/logo.png" className="h-10 w-36" />
         </NavLink>
 
