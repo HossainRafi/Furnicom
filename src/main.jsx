@@ -3,25 +3,33 @@ import App from "./App";
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { Home } from "./pages/home/Home";
+import { Shop } from "./pages/shop/Shop";
+import { About } from "./pages/about/About";
+import { Contact } from "./pages/contact/Contact";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
-    children:[
+    children: [
       {
         path: "/",
-        element: <h1>Home</h1>
+        element: <Home />,
       },
       {
         path: "/about",
-        element: <h1>About</h1>
+        element: <About />,
       },
       {
         path: "/contact",
-        element: <h1>Contact</h1>
+        element: <Contact />,
       },
-    ]
+      {
+        path: "/shop",
+        element: <Shop />,
+      },
+    ],
   },
 ]);
 
