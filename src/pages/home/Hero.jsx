@@ -1,3 +1,4 @@
+import { FaSearch } from "react-icons/fa";
 import bannerImg from "../../assets/banner.png";
 
 export const Hero = () => {
@@ -6,7 +7,8 @@ export const Hero = () => {
       className={`relative h-screen bg-cover bg-center text-white  `}
       style={{ backgroundImage: `url(${bannerImg})` }}
     >
-      <div className="relative md:pt-48 pt-28 px-4 text-center md:w-1/2 mx-auto space-y-8">
+      <div className="relative md:pt-44 pt-28 px-4 text-center md:w-1/2 mx-auto space-y-8">
+        {/* banner heading */}
         <h1 className="text-4xl lg:text-5xl lg:leading-tight leading-snug font-medium">
           Make your interior more minimalistic & modern
         </h1>
@@ -14,6 +16,18 @@ export const Hero = () => {
           Turn your room with panto into a lot more minimalist and modern with
           ease and speed
         </p>
+
+        {/* search field with input and icon */}
+        <div className="relative inline-block z-30">
+          <input
+            type="text"
+            placeholder="Search furniture"
+            className="w-full md:w-80 px-6 py-2  bg-black/50 rounded-full border border-gray-300 text-white focus:outline-none"
+          />
+          <div className="absolute right-3 top-1/2 transform -translate-y-1/2 p-2 cursor-pointer">
+            <FaSearch className="text-white " />
+          </div>
+        </div>
       </div>
     </section>
   );
