@@ -1,5 +1,4 @@
-/* eslint-disable react/prop-types */
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { FaBars, FaCartPlus } from "react-icons/fa";
 import { ImCross } from "react-icons/im";
 import { NavLink } from "react-router-dom";
@@ -32,14 +31,37 @@ const NavMenu = ({ toggleMenu }) => {
 
 export const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false); // state to toggle mobile menu
+  const [isScrolled, setIsScrolled] = useState(false); // state for scrolling
 
   // correctly toggle menu state
   const toggleMenu = () => {
     setIsMenuOpen((prevState) => !prevState);
   };
 
+  // scrolling effect functionality
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
-    <header className={`fixed top-0 left-0 right-0 z-50 transition duration-300 ease-in-out`}>
+    <header
+      className={`fixed top-0 left-0 w-full z-50 transition duration-300 ease-in-out ${
+        isScrolled
+          ? "bg-white shadow-md text-black"
+          : "bg-transparent text-white"
+      }`}
+    >
       <nav className="max-w-screen-2xl container mx-auto py-4 px-12 flex justify-between items-center">
         {/* nav logo */}
         <NavLink to="/">

@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import btnIcon from "../assets/button-icon.png";
 
 export const Button = ({text}) => {
