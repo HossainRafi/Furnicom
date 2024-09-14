@@ -5,5 +5,5 @@ body {
 }
 
 .section-container {
-  @apply max-w-screen-2xl container mx-auto py-4 px-12;
+  @apply max-w-screen-2xl container mx-auto py-4 px-6 md:px-12;
 }

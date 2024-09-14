@@ -62,7 +62,7 @@ export const Navbar = () => {
           : "bg-transparent text-white"
       }`}
     >
-      <nav className="max-w-screen-2xl container mx-auto py-4 px-12 flex justify-between items-center">
+      <nav className="max-w-screen-2xl container mx-auto py-4 px-6 md:px-12 flex justify-between items-center">
         {/* nav logo */}
         <NavLink to="/">
           <img src="../../public/logo.png" className="h-8 w-32" />
