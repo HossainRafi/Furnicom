@@ -1,4 +1,5 @@
-import { FaCartPlus } from "react-icons/fa";
+import { useState } from "react";
+import { FaBars, FaCartPlus } from "react-icons/fa";
 import { NavLink } from "react-router-dom";
 
 const navItems = [
@@ -28,6 +29,13 @@ const NavMenu = () => {
 };
 
 export const Navbar = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false); // state to toggle mobile menu
+
+  // correctly toggle menu state
+  const toggleMenu = () => {
+    setIsMenuOpen((prevState) => !prevState);
+  };
+
   return (
     <header>
       <nav className="max-w-screen-2xl container mx-auto py-6 px-4 flex justify-between items-center">
@@ -35,6 +43,14 @@ export const Navbar = () => {
         <NavLink to="/">
           <img src="../../public/logo.png" className="h-8 w-32" />
         </NavLink>
+
+        {/* hamburger menu for mobile */}
+        <div
+          onClick={toggleMenu}
+          className="md:hidden text-xl cursor-pointer hover:text-primary"
+        >
+          {isMenuOpen ? null : <FaBars />}
+        </div>
 
         {/* desktop menu items */}
         <div className="hidden md:flex">
