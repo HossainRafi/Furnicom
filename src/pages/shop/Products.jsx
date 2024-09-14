@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { products } from "../../utils/products";
+import { ProductCard } from "./ProductCard";
 
 export const Products = ({ headline }) => {
   const categories = ["Chair", "Beds", "Sofa", "Lamp"]; // categories
@@ -29,6 +31,13 @@ export const Products = ({ headline }) => {
               </button>
             ))}
           </div>
+        </div>
+
+        {/* products card grid */}
+        <div>
+          {products.map((product, index) => (
+            <ProductCard key={index} product={product} />
+          ))}
         </div>
       </div>
     </div>
