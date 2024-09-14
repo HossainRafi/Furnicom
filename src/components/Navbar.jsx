@@ -40,7 +40,7 @@ export const Navbar = () => {
 
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition duration-300 ease-in-out`}>
-      <nav className="max-w-screen-2xl container mx-auto py-4 px-4 flex justify-between items-center">
+      <nav className="max-w-screen-2xl container mx-auto py-4 px-12 flex justify-between items-center">
         {/* nav logo */}
         <NavLink to="/">
           <img src="../../public/logo.png" className="h-8 w-32" />

@@ -29,6 +29,9 @@ export const Hero = () => {
           </div>
         </div>
       </div>
+
+      {/* overlay with bottom blur effect */}
+      <div className="absolute inset-x-0 -mb-2 bottom-0 h-2/4 bg-gradient-to-t from-white via-transparent to-transparent blur-sm"></div>
     </section>
   );
 };
