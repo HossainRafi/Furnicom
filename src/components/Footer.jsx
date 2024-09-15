@@ -11,7 +11,7 @@ export const Footer = () => {
             <img src="../../public/logo.png" className="h-8 w-32" />
           </NavLink>
           <p className=" md:mr-12 text-justify mt-5">
-            YourCompany is dedicated to providing the best quality products to
+            Our company is dedicated to providing the best quality products to
             enhance your home and lifestyle. We combine style and comfort to
             transform your living spaces into modern sanctuaries.
           </p>
@@ -34,6 +34,28 @@ export const Footer = () => {
             <li>
               <a href="#" className=" hover:text-primary transition">
                 Contact
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        {/* third div: menu items-02 */}
+        <div>
+          <h3 className="text-xl font-semibold mb-4">Customer Care</h3>
+          <ul className="space-y-2">
+            <li>
+              <a href="#" className=" hover:text-primary transition">
+                FAQ
+              </a>
+            </li>
+            <li>
+              <a href="#" className=" hover:text-primary transition">
+                Returns
+              </a>
+            </li>
+            <li>
+              <a href="#" className=" hover:text-primary transition">
+                Support
               </a>
             </li>
           </ul>
