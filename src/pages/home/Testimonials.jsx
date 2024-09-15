@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import testimonialBG1 from "../../assets/testimonial1.png";
 import testimonialBG2 from "../../assets/testimonial2.png";
 import testimonialBG3 from "../../assets/testimonial3.png";
@@ -8,13 +9,13 @@ import reviewer3 from "../../assets/reviewer3.png";
 
 // import swiper styles
 import { Swiper, SwiperSlide } from "swiper/react";
-import 'swiper/css';
-import 'swiper/css/pagination';
-import 'swiper/css/navigation';
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
 
 // import required swiper modules
-import { Pagination, Autoplay, Navigation } from 'swiper/modules';
-
+import { Pagination, Autoplay, Navigation } from "swiper/modules";
+import { Rating } from "./../../components/Rating";
 
 export const Testimonials = () => {
   // fake review data
@@ -67,7 +68,7 @@ export const Testimonials = () => {
       rating: 4,
     },
   ];
-  
+
   return (
     <section className="section-container px-8">
       {/* subheading and heading */}
@@ -105,7 +106,8 @@ export const Testimonials = () => {
         className="md:max-w-7xl mx-auto relative rounded"
       >
         {reviews.map((review, index) => (
-          <SwiperSlide key={index}
+          <SwiperSlide
+            key={index}
             className=" bg-no-repeat bg-cover rounded-lg"
             style={{ backgroundImage: `url(${review.coverImg})` }}
           >
@@ -121,9 +123,13 @@ export const Testimonials = () => {
                     {review.name}
                   </h3>
                   <p className=" mb-3 dark:text-black">Verified Customer</p>
-                  <p className="text-gray-500 dark:text-black mb-4">
-                    {review.review}
+                  <p className="text-gray-500 dark:text-black mb-4 flex">
+                    "{review.review}"
                   </p>
+
+                  <div className="w-full mx-auto mb-2 flex items-center justify-center text-center">
+                    <Rating rating={review.rating} />
+                  </div>
                 </div>
               </div>
             </div>
