@@ -1,4 +1,5 @@
 import React from "react";
+import { FaFacebookF, FaInstagram, FaTwitter } from "react-icons/fa";
 import { NavLink } from "react-router-dom";
 
 export const Footer = () => {
@@ -59,6 +60,31 @@ export const Footer = () => {
               </a>
             </li>
           </ul>
+        </div>
+
+        {/* fourth div: social media */}
+        <div>
+          <h3 className="text-xl font-semibold mb-4">Follow Us</h3>
+          <div className="flex flex-col space-y-2">
+            <a
+              href="#"
+              className="flex items-center space-x-2  hover:text-primary transition"
+            >
+              <FaFacebookF /> <span>Facebook</span>
+            </a>
+            <a
+              href="#"
+              className="flex items-center space-x-2  hover:text-primary transition"
+            >
+              <FaTwitter /> <span>Twitter</span>
+            </a>
+            <a
+              href="#"
+              className="flex items-center space-x-2  hover:text-primary transition"
+            >
+              <FaInstagram /> <span>Instagram</span>
+            </a>
+          </div>
         </div>
       </div>
     </footer>
