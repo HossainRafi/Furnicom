@@ -59,7 +59,7 @@ export const Navbar = () => {
     <header
       className={`fixed top-0 left-0 w-full z-50 transition duration-300 ease-in-out ${
         isScrolled
-          ? "bg-white shadow-md text-black"
+          ? "bg-white shadow-md text-black dark:bg-black dark:text-white"
           : "bg-transparent text-white"
       }`}
     >

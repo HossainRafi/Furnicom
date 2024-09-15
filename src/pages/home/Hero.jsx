@@ -45,9 +45,9 @@ export const Hero = () => {
           className="focus:outline-none font-bold text-lg bg-black text-white p-3 rounded-full "
         >
           {isDarkMode ? (
-            <BsSunFill className="text-yellow-300 text-2xl" />
+            <BsSunFill className="text-yellow-300 text-xl"/>
           ) : (
-            <BsMoonStars className="text-2xl" />
+            <BsMoonStars className="text-xl"/>
           )}
         </button>
       </div>
