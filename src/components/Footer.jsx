@@ -1,6 +1,6 @@
 import React from "react";
 import { FaFacebookF, FaInstagram, FaTwitter } from "react-icons/fa";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 export const Footer = () => {
   return (
@@ -86,6 +86,18 @@ export const Footer = () => {
             </a>
           </div>
         </div>
+      </div>
+
+      {/* bottom footer */}
+      <div className="mt-12 section-container flex flex-col sm:flex-row sm:justify-between sm:items-center sm:text-center gap-4 text-left text-black dark:bg-gray-800 dark:text-white border-t border-gray-300 pt-4">
+        <p>
+          {" "}
+          &copy; {new Date().getFullYear()} Furnicom. All rights reserved
+        </p>
+        <p className="flex gap-4">
+          <Link to="/">Terms & Conditions</Link>
+          <Link to="/">Privacy Policy</Link>
+        </p>
       </div>
     </footer>
   );
