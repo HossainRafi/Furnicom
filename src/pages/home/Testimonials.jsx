@@ -6,6 +6,15 @@ import reviewer1 from "../../assets/reviewer1.png";
 import reviewer2 from "../../assets/reviewer2.png";
 import reviewer3 from "../../assets/reviewer3.png";
 
+import { Swiper, SwiperSlide } from "swiper/react";// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
+
+// import required modules
+import { Pagination, Autoplay, Navigation } from 'swiper/modules';
+
+
 export const Testimonials = () => {
   // fake review data
   const reviews = [
@@ -59,10 +68,66 @@ export const Testimonials = () => {
   ];
   return (
     <section className="section-container px-8">
+      {/* Subheading and Heading */}
       <div className="text-center mb-12">
         <p className="text-primary uppercase tracking-wide">Testimonials</p>
         <h2 className="text-4xl font-bold">What Our Clients Say</h2>
       </div>
+
+      <Swiper
+        slidesPerView={1}
+        spaceBetween={10}
+        autoplay={{
+          delay: 3500,
+          disableOnInteraction: false,
+        }}
+        pagination={{
+          clickable: true,
+        }}
+        breakpoints={{
+          640: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+          },
+          768: {
+            slidesPerView: 2,
+            spaceBetween: 40,
+          },
+          1024: {
+            slidesPerView: 3,
+            spaceBetween: 20,
+          },
+        }}
+        navigation={true}
+        modules={[Pagination, Autoplay, Navigation]}
+        className="md:max-w-7xl mx-auto relative rounded"
+      >
+        {reviews.map((review, index) => (
+          <SwiperSlide key={index}
+            className=" bg-no-repeat bg-cover rounded-lg"
+            style={{ backgroundImage: `url(${review.coverImg})` }}
+          >
+            <div className="md:h-[547px] flex  justify-center items-center mb-4">
+              <div className="mt-16 mb-5 bg-white border rounded-xl md:w-4/5 w-full p-4 relative">
+                <img
+                  src={review.image}
+                  alt={review.name}
+                  className="size-20 absolute -top-10 left-1/2 -translate-x-1/2 rounded-full ring-2 ring-primary object-cover"
+                />
+                <div className="mt-16 text-center">
+                  <h3 className="text-lg font-semibold dark:text-black">
+                    {review.name}
+                  </h3>
+                  <p className=" mb-3 dark:text-black">Verified Customer</p>
+                  <p className="text-gray-500 dark:text-black mb-4">
+                    {review.review}
+                  </p>
+                </div>
+              </div>
+            </div>
+          </SwiperSlide>
+        ))}
+      </Swiper>
     </section>
   );
 };
