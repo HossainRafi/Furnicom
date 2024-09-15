@@ -1,8 +1,20 @@
-# React + Vite
+# Project Name: [Furnicom](https://furnicom-bice.vercel.app)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Technologies:
+- React JS
+- React Router DOM
+- JavaScript
+- Tailwind CSS
+- React Context
+- React icon
 
-Currently, two official plugins are available:
+## Project Description:
+### Furnicom is a single page fully responsive Frontend React application. It is fully responsive for every type of devices with dark and light theme functionality. Some features of this app:-
+- Dark & Light theme support
+- Fully responsive styles
+- Product add to cart functionality
+- Beautiful UI
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Project Images:
+![app image](https://i.ibb.co.com/G3GXcrf/img1.png)
+![app image](https://i.ibb.co.com/TT6KST9/img2.png)
