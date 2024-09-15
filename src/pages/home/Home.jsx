@@ -3,6 +3,7 @@ import { ChooseUs } from "./ChooseUs";
 import { Experiences } from "./Experiences";
 import { Hero } from "./Hero";
 import { Materials } from "./Materials";
+import { Testimonials } from "./Testimonials";
 
 export const Home = () => {
   return (
@@ -12,6 +13,7 @@ export const Home = () => {
       <Products headline="Best Selling Product" />
       <Experiences />
       <Materials />
+      <Testimonials />
     </>
   );
 };
