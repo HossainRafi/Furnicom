@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { FaBars, FaCartPlus } from "react-icons/fa";
 import { ImCross } from "react-icons/im";
 import { NavLink } from "react-router-dom";
+import Logo from "../../public/logo.png";
 
 const navItems = [
   { path: "/", label: "Home" },
@@ -65,7 +66,7 @@ export const Navbar = () => {
       <nav className="max-w-screen-2xl container mx-auto py-4 px-6 md:px-12 flex justify-between items-center">
         {/* nav logo */}
         <NavLink to="/">
-          <img src="../../public/logo.png" className="h-8 w-32" />
+          <img src={Logo} className="h-8 w-32" />
         </NavLink>
 
         {/* hamburger menu for mobile */}

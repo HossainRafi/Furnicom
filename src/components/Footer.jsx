@@ -1,6 +1,6 @@
-import React from "react";
-import { FaFacebookF, FaInstagram, FaTwitter } from "react-icons/fa";
+import Logo from "../../public/logo.png";
 import { Link, NavLink } from "react-router-dom";
+import { FaFacebookF, FaInstagram, FaTwitter } from "react-icons/fa";
 
 export const Footer = () => {
   return (
@@ -9,7 +9,7 @@ export const Footer = () => {
         {/* first div: lgo and description */}
         <div className="md:col-span-2">
           <NavLink to="/">
-            <img src="../../public/logo.png" className="h-8 w-32" />
+            <img src={Logo} className="h-8 w-32" />
           </NavLink>
           <p className=" md:mr-12 text-justify mt-5">
             Our company is dedicated to providing the best quality products to
@@ -90,10 +90,7 @@ export const Footer = () => {
 
       {/* bottom footer */}
       <div className="mt-12 section-container flex flex-col sm:flex-row sm:justify-between sm:items-center sm:text-center gap-4 text-left text-black dark:bg-gray-800 dark:text-white border-t border-gray-300 pt-4">
-        <p>
-          {" "}
-          &copy; {new Date().getFullYear()} Furnicom. All rights reserved
-        </p>
+        <p> &copy; {new Date().getFullYear()} Furnicom. All rights reserved</p>
         <p className="flex gap-4">
           <Link to="/">Terms & Conditions</Link>
           <Link to="/">Privacy Policy</Link>
