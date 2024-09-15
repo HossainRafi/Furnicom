@@ -5,7 +5,7 @@ import { getImgUrl } from "../../utils/getImageURL";
 export const ProductCard = ({ product }) => {
   return (
     <div key={product.id} className="">
-      <div className="bg-[#f2f2f2]">
+      <div className="bg-[#f6f6f6] rounded-t-xl">
         <img
           src={getImgUrl(`${product.imageUrl}`)}
           alt={product.name}
@@ -13,7 +13,7 @@ export const ProductCard = ({ product }) => {
         />
       </div>
 
-      <div className={`p-6 dark:bg-black bg-[#f2f2f2] shadow-sm`}>
+      <div className={`p-6 dark:bg-black bg-[#f6f6f6] shadow-sm rounded-b-xl`}>
         <h4 className="text-base  mb-1">{product.category}</h4>
         <h3 className="font-semibold text-xl mb-2">{product.name}</h3>
         <Rating rating={product.rating} />
@@ -21,9 +21,7 @@ export const ProductCard = ({ product }) => {
           <p className="text-secondary dark:text-white font-bold text-lg">
             <sup>$</sup> <span className="">{product.price}</span>
           </p>
-          <button
-            className="bg-secondary p-2 rounded-full text-white"
-          >
+          <button className="bg-secondary p-2 rounded-full text-white">
             <FaCartPlus />
           </button>
         </div>

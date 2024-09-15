@@ -4,8 +4,13 @@ import { ProductCard } from "./ProductCard";
 
 export const Products = ({ headline }) => {
   const categories = ["Chair", "Beds", "Sofa", "Lamp"]; // categories
-
   const [selectedCategory, setSelectedCategory] = useState("Chair"); // state for selected category
+
+  // filter products based on category
+  const filteredProducts = products.filter(
+    (product) => product.category === selectedCategory
+  );
+
   return (
     <div>
       <div className="section-container">
@@ -35,7 +40,7 @@ export const Products = ({ headline }) => {
 
         {/* products card grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
-          {products.map((product, index) => (
+          {filteredProducts.map((product, index) => (
             <ProductCard key={index} product={product} />
           ))}
         </div>
