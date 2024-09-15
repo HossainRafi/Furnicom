@@ -14,10 +14,9 @@ export const ProductCard = ({ product }) => {
       </div>
 
       <div className={`p-6 dark:bg-black bg-[#f6f6f6] shadow-sm rounded-b-xl`}>
-        <h4 className="text-base  mb-1">{product.category}</h4>
-        <h3 className="font-semibold text-xl mb-2">{product.name}</h3>
+        <h3 className="font-semibold text-xl mb-4">{product.name}</h3>
         <Rating rating={product.rating} />
-        <div className="mt-5 flex justify-between items-center">
+        <div className="mt-8 flex justify-between items-center">
           <p className="text-secondary dark:text-white font-bold text-lg">
             <sup>$</sup> <span className="">{product.price}</span>
           </p>
