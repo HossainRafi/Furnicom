@@ -6,12 +6,13 @@ import reviewer1 from "../../assets/reviewer1.png";
 import reviewer2 from "../../assets/reviewer2.png";
 import reviewer3 from "../../assets/reviewer3.png";
 
-import { Swiper, SwiperSlide } from "swiper/react";// Import Swiper styles
+// import swiper styles
+import { Swiper, SwiperSlide } from "swiper/react";
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 
-// import required modules
+// import required swiper modules
 import { Pagination, Autoplay, Navigation } from 'swiper/modules';
 
 
@@ -66,9 +67,10 @@ export const Testimonials = () => {
       rating: 4,
     },
   ];
+  
   return (
     <section className="section-container px-8">
-      {/* Subheading and Heading */}
+      {/* subheading and heading */}
       <div className="text-center mb-12">
         <p className="text-primary uppercase tracking-wide">Testimonials</p>
         <h2 className="text-4xl font-bold">What Our Clients Say</h2>
