@@ -1,4 +1,5 @@
 import React, { createContext, useState } from "react";
+import Swal from "sweetalert2";
 
 export const CartContext = createContext();
 
@@ -8,11 +9,21 @@ export const CartProvider = ({ children }) => {
   const addToCart = (product) => {
     // check if the product is already in the cart
     if (cartItems.some((item) => item.id === product.id)) {
-      alert(`already in cart `);
+      Swal.fire({
+        icon: "error",
+        title: "Already exists in the cart",
+        showConfirmButton: false,
+        timer: 1500,
+      });
       
     } else {
       setCartItems((prevItems) => [...prevItems, product]);
-      alert("product added successfully");
+      Swal.fire({
+        icon: "success",
+        title: "Product added successfully",
+        showConfirmButton: false,
+        timer: 1500,
+      });
     }
   };
 
