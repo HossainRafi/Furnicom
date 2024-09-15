@@ -3,16 +3,19 @@ import { Outlet } from "react-router-dom";
 import { Navbar } from "./components/Navbar";
 import { Footer } from "./components/Footer";
 import { ThemeProvider } from "./context/ThemeContext";
+import { CartProvider } from "./context/CartContext";
 
 function App() {
   return (
     <>
       <ThemeProvider>
-        <Navbar />
-        <main className="min-h-screen">
-          <Outlet />
-        </main>
-        <Footer />
+        <CartProvider>
+          <Navbar />
+          <main className="min-h-screen">
+            <Outlet />
+          </main>
+          <Footer />
+        </CartProvider>
       </ThemeProvider>
     </>
   );

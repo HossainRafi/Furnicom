@@ -1,8 +1,9 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { FaBars, FaCartPlus } from "react-icons/fa";
 import { ImCross } from "react-icons/im";
 import { NavLink } from "react-router-dom";
 import Logo from "../../public/logo.png";
+import { CartContext } from './../context/CartContext';
 
 const navItems = [
   { path: "/", label: "Home" },
@@ -31,7 +32,8 @@ const NavMenu = ({ toggleMenu }) => {
 };
 
 export const Navbar = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false); // state to toggle mobile menu
+  const { cartCount } = useContext(CartContext); //cart items from context
+  const [isMenuOpen, setIsMenuOpen] = useState(false); // state for toggle mobile menu
   const [isScrolled, setIsScrolled] = useState(false); // state for scrolling
 
   // correctly toggle menu state
@@ -101,7 +103,7 @@ export const Navbar = () => {
         <div className="hidden md:block relative cursor-pointer">
           <FaCartPlus className="text-xl" />
           <sup className="absolute -top-2 -right-1 bg-primary text-white rounded-full w-4 h-4 flex items-center justify-center text-xs">
-            0
+            {cartCount}
           </sup>
         </div>
       </nav>

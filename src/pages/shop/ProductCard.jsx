@@ -1,8 +1,12 @@
 import { FaCartPlus } from "react-icons/fa";
 import { Rating } from "../../components/Rating";
 import { getImgUrl } from "../../utils/getImageURL";
+import { useContext } from "react";
+import { CartContext } from "../../context/CartContext";
 
 export const ProductCard = ({ product }) => {
+  const { addToCart } = useContext(CartContext);
+
   return (
     <div key={product.id} className="">
       <div className="dark:bg-[#EEEEEE] bg-[#f6f6f6] rounded-t-xl">
@@ -24,7 +28,10 @@ export const ProductCard = ({ product }) => {
           <p className="text-secondary dark:text-black font-bold text-lg">
             $ <span className="">{product.price}</span>
           </p>
-          <button className="bg-secondary p-2 rounded-full text-white">
+          <button
+            onClick={() => addToCart(product)}
+            className="bg-secondary p-2 rounded-full text-white"
+          >
             <FaCartPlus />
           </button>
         </div>
