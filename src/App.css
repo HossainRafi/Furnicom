@@ -8,6 +8,11 @@ body {
   @apply max-w-screen-2xl container mx-auto py-4 px-6 md:px-12;
 }
 
+/* dark mode css design */
+.dark {
+  @apply bg-gray-900 text-white;
+}
+
 /* swiper slider previous and next button design */
 .swiper-button-prev:after,
 .swiper-button-next:after {

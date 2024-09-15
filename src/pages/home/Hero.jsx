@@ -1,8 +1,12 @@
 import { FaSearch } from "react-icons/fa";
 import bannerImg from "../../assets/banner.png";
-import { BsSun } from "react-icons/bs";
+import { BsMoonStars, BsSunFill } from "react-icons/bs";
+import { useContext } from "react";
+import { ThemeContext } from "./../../context/ThemeContext";
 
 export const Hero = () => {
+  const { isDarkMode, toggleTheme } = useContext(ThemeContext);
+
   return (
     <section
       className={`relative h-screen bg-cover bg-center text-white  `}
@@ -37,8 +41,14 @@ export const Hero = () => {
       {/* theme toggler button */}
       <div className="bottom-28 right-20 z-40 fixed">
         <button
+          onClick={toggleTheme}
           className="focus:outline-none font-bold text-lg bg-black text-white p-3 rounded-full "
-        ><BsSun className="text-yellow-300 text-2xl" />
+        >
+          {isDarkMode ? (
+            <BsSunFill className="text-yellow-300 text-2xl" />
+          ) : (
+            <BsMoonStars className="text-2xl" />
+          )}
         </button>
       </div>
     </section>
