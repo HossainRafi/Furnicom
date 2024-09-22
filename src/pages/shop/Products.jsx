@@ -9,7 +9,7 @@ import { ThemeContext } from "./../../context/ThemeContext";
 export const Products = ({ headline }) => {
   const { isDarkMode, toggleTheme } = useContext(ThemeContext);
 
-  const categories = ["Samsung", "Apple", "Huawei", "Oneplus"]; // categories array
+  const categories = ["Samsung", "Oneplus", "Apple", "Huawei"]; // categories array
   const [selectedCategory, setSelectedCategory] = useState("Samsung"); // state for selected category
   const [visibleProducts, setVisibleProducts] = useState(4); // state for visible products
 
@@ -29,7 +29,7 @@ export const Products = ({ headline }) => {
       <h2 className="text-4xl font-bold text-center my-8 ">{headline}</h2>
 
       {/* category option tabs */}
-      <div className="bg-[#EEEEEE] max-w-md mx-auto rounded-md md:p-2 py-5 mb-16">
+      <div className="bg-[#EEEEEE] max-w-fit mx-auto rounded-md md:p-2 py-5 mb-16">
         <div className="flex flex-col sm:flex-row items-center md:justify-between justify-center gap-4">
           {categories.map((category) => (
             <button
