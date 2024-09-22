@@ -15,7 +15,7 @@ export const Experiences = () => {
         <p className="text-secondary dark:text-white mb-5 lg:w-2/3">
           You don’t have to worry about the result because all of these
           interiors are made by people who are professionals in their fields
-          with an elegant and lucurious style and with premium quality materials
+          with an elegant and lucurious style and with premium quality Service
         </p>
         <Button text="More Info" />
       </div>

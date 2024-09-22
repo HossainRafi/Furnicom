@@ -9,7 +9,7 @@ export const Hero = () => {
 
   return (
     <section
-      className={`relative h-screen bg-cover bg-center text-white  `}
+      className={`relative h-screen bg-cover bg-center text-white`}
       style={{ backgroundImage: `url(${bannerImg})` }}
     >
       <div className="relative md:pt-44 pt-28 px-4 text-center md:w-1/2 mx-auto space-y-8">

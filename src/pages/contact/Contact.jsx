@@ -1,5 +1,5 @@
 import contactBgImg from "../../assets/contact-background.jpg";
-import { Materials } from "../home/Materials";
+import { Service } from "../home/Service";
 import { BsMoonStars, BsSunFill } from "react-icons/bs";
 import { useContext } from "react";
 import { ThemeContext } from "./../../context/ThemeContext";
@@ -18,7 +18,7 @@ export const Contact = () => {
           <h1 className="text-5xl font-bold">Contact</h1>
         </div>
       </div>
-      <Materials />
+      <Service />
 
       {/* theme toggler button */}
       <div className="bottom-28 right-20 z-40 fixed">
@@ -27,7 +27,7 @@ export const Contact = () => {
           className="focus:outline-none font-bold text-lg bg-black text-white p-3 rounded-full "
         >
           {isDarkMode ? (
-            <BsSunFill className="text-yellow-300 text-xl"/>
+            <BsSunFill className="text-yellow-300 text-xl" />
           ) : (
             <BsMoonStars className="text-xl" />
           )}
