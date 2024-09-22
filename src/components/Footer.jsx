@@ -12,9 +12,7 @@ export const Footer = () => {
             <img src={Logo} className="h-10 w-32" />
           </NavLink>
           <p className=" md:mr-12 text-justify mt-5">
-            Our company is dedicated to providing the best quality products to
-            enhance your home and lifestyle. We combine style and comfort to
-            transform your living spaces into modern sanctuaries.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam minus esse facilis minima accusamus ratione, ex cum quia natus assumenda fugiat modi velit id sint nulla dolore ea doloremque nostrum.
           </p>
         </div>
 

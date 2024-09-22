@@ -23,14 +23,15 @@ export const Testimonials = () => {
     {
       name: "John Doe",
       review:
-        "Panto made my room feel more alive and minimalist. Highly recommend!",
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione eveniet reiciendis harum",
       image: reviewer1,
       coverImg: testimonialBG1,
       rating: 4,
     },
     {
       name: "Jane Smith",
-      review: "Great designs and superb service! I love my new living space.",
+      review:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione eveniet reiciendis harum",
       image: reviewer2,
       coverImg: testimonialBG2,
       rating: 5,
@@ -38,7 +39,7 @@ export const Testimonials = () => {
     {
       name: "Michael Brown",
       review:
-        "Very easy to work with. Turned my home into a cozy, modern sanctuary!",
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione eveniet reiciendis harum",
       image: reviewer3,
       coverImg: testimonialBG3,
       rating: 4,
@@ -46,7 +47,7 @@ export const Testimonials = () => {
     {
       name: "Michael Brown",
       review:
-        "Very easy to work with. Turned my home into a cozy, modern sanctuary!",
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione eveniet reiciendis harum",
       image: reviewer1,
       coverImg: testimonialBG1,
       rating: 3,
@@ -54,7 +55,7 @@ export const Testimonials = () => {
     {
       name: "Michael Brown",
       review:
-        "Very easy to work with. Turned my home into a cozy, modern sanctuary!",
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione eveniet reiciendis harum",
       image: reviewer2,
       coverImg: testimonialBG2,
       rating: 5,
@@ -62,7 +63,7 @@ export const Testimonials = () => {
     {
       name: "Michael Brown",
       review:
-        "Very easy to work with. Turned my home into a cozy, modern sanctuary!",
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione eveniet reiciendis harum",
       image: reviewer3,
       coverImg: testimonialBG3,
       rating: 4,
@@ -74,7 +75,7 @@ export const Testimonials = () => {
       {/* subheading and heading */}
       <div className="text-center mb-12">
         <p className="text-primary uppercase tracking-wide">Testimonials</p>
-        <h2 className="text-4xl font-bold">What Our Clients Say</h2>
+        <h2 className="text-4xl font-bold">What Our Clients Says</h2>
       </div>
 
       <Swiper
