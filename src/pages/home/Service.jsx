@@ -9,12 +9,14 @@ export const Service = () => {
       <div className="md:w-1/2 mx-auto">
         <h3 className="text-lg font-semibold text-primary mb-4">Service</h3>
         <h2 className="text-4xl font-bold mb-4 capitalize lg:w-1/2">
-          Very serious Service for making furniture
+          we provide the best service
         </h2>
         <p className="text-secondary dark:text-white mb-5 lg:w-2/3">
-          Because panto was very serious about designing furniture for our
-          environment, using a very expensive and famous capital but at a
-          relatively low price
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloribus
+          tenetur culpa doloremque facere quia quaerat enim dolores voluptas
+          unde facilis. Deserunt quisquam molestias architecto impedit, facilis
+          minus accusamus quia facere, quam, molestiae earum provident incidunt
+          non excepturi veritatis rerum nulla.
         </p>
         <Button text="More Info" />
       </div>
