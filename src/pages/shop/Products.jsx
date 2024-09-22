@@ -9,8 +9,8 @@ import { ThemeContext } from "./../../context/ThemeContext";
 export const Products = ({ headline }) => {
   const { isDarkMode, toggleTheme } = useContext(ThemeContext);
 
-  const categories = ["Chair", "Beds", "Sofa", "Lamp"]; // categories array
-  const [selectedCategory, setSelectedCategory] = useState("Chair"); // state for selected category
+  const categories = ["Samsung", "Apple", "Huawei", "Oneplus"]; // categories array
+  const [selectedCategory, setSelectedCategory] = useState("Samsung"); // state for selected category
   const [visibleProducts, setVisibleProducts] = useState(4); // state for visible products
 
   // filter products based on category
