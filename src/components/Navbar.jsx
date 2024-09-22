@@ -68,7 +68,7 @@ export const Navbar = () => {
       <nav className="max-w-screen-2xl container mx-auto py-4 px-6 md:px-12 flex justify-between items-center">
         {/* nav logo */}
         <NavLink to="/">
-          <img src={Logo} className="h-8 w-32" />
+          <img src={Logo} className="h-10 w-32" />
         </NavLink>
 
         {/* hamburger menu for mobile */}
