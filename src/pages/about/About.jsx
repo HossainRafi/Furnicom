@@ -21,13 +21,13 @@ export const About = () => {
       <Experiences />
 
       {/* theme toggler button */}
-      <div className="bottom-28 right-20 z-40 fixed">
+      <div className="bottom-10 md:bottom-28 right-5 md:right-20 z-40 fixed">
         <button
           onClick={toggleTheme}
           className="focus:outline-none font-bold text-lg bg-black text-white p-3 rounded-full "
         >
           {isDarkMode ? (
-            <BsSunFill className="text-yellow-300 text-xl"/>
+            <BsSunFill className="text-yellow-300 text-xl" />
           ) : (
             <BsMoonStars className="text-xl" />
           )}

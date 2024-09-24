@@ -39,7 +39,7 @@ export const Hero = () => {
       <div className="absolute inset-x-0 -mb-2 bottom-0 h-2/4 bg-gradient-to-t from-white via-transparent to-transparent blur-sm" />
 
       {/* theme toggler button */}
-      <div className="bottom-28 right-20 z-40 fixed">
+      <div className="bottom-10 md:bottom-28 right-5 md:right-20 z-40 fixed">
         <button
           onClick={toggleTheme}
           className="focus:outline-none font-bold text-lg bg-black text-white p-3 rounded-full "
